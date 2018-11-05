@@ -1,0 +1,98 @@
+04 十一月 2018 14:23:35,825 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.node.PollingPropertiesFileConfigurationProvider.start:61)  - Configuration provider starting
+04 十一月 2018 14:23:35,830 INFO  [conf-file-poller-0] (org.apache.flume.node.PollingPropertiesFileConfigurationProvider$FileWatcherRunnable.run:133)  - Reloading configuration file:/Users/harold/Documents/Code/sparkdemo/src/main/exec-memory-kafka.conf
+04 十一月 2018 14:23:35,835 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addProperty:1017)  - Processing:kafka-sink
+04 十一月 2018 14:23:35,835 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addProperty:1017)  - Processing:kafka-sink
+04 十一月 2018 14:23:35,836 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addProperty:931)  - Added sinks: kafka-sink Agent: exec-memory-kafka
+04 十一月 2018 14:23:35,836 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addProperty:1017)  - Processing:kafka-sink
+04 十一月 2018 14:23:35,836 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addProperty:1017)  - Processing:kafka-sink
+04 十一月 2018 14:23:35,836 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addProperty:1017)  - Processing:kafka-sink
+04 十一月 2018 14:23:35,836 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addProperty:1017)  - Processing:kafka-sink
+04 十一月 2018 14:23:35,846 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration.validateConfiguration:141)  - Post-validation flume configuration contains configuration for agents: [exec-memory-kafka]
+04 十一月 2018 14:23:35,846 INFO  [conf-file-poller-0] (org.apache.flume.node.AbstractConfigurationProvider.loadChannels:145)  - Creating channels
+04 十一月 2018 14:23:35,850 INFO  [conf-file-poller-0] (org.apache.flume.channel.DefaultChannelFactory.create:42)  - Creating instance of channel memory-channel type memory
+04 十一月 2018 14:23:35,853 INFO  [conf-file-poller-0] (org.apache.flume.node.AbstractConfigurationProvider.loadChannels:200)  - Created channel memory-channel
+04 十一月 2018 14:23:35,853 INFO  [conf-file-poller-0] (org.apache.flume.source.DefaultSourceFactory.create:41)  - Creating instance of source exec-source, type exec
+04 十一月 2018 14:23:35,858 INFO  [conf-file-poller-0] (org.apache.flume.sink.DefaultSinkFactory.create:42)  - Creating instance of sink: kafka-sink, type: org.apache.flume.sink.kafka.KafkaSink
+04 十一月 2018 14:23:35,859 INFO  [conf-file-poller-0] (org.apache.flume.sink.kafka.KafkaSink.configure:207)  - Using the static topic: streamingtopic this may be over-ridden by event headers
+04 十一月 2018 14:23:35,862 INFO  [conf-file-poller-0] (org.apache.flume.sink.kafka.KafkaSinkUtil.getKafkaProperties:34)  - context={ parameters:{channel=memory-channel, topic=streamingtopic, requiredAcks=1, type=org.apache.flume.sink.kafka.KafkaSink, batchSize=10, brokerList=localhost:9092} }
+04 十一月 2018 14:23:35,872 INFO  [conf-file-poller-0] (org.apache.flume.node.AbstractConfigurationProvider.getConfiguration:114)  - Channel memory-channel connected to [exec-source, kafka-sink]
+04 十一月 2018 14:23:35,876 INFO  [conf-file-poller-0] (org.apache.flume.node.Application.startAllComponents:138)  - Starting new configuration:{ sourceRunners:{exec-source=EventDrivenSourceRunner: { source:org.apache.flume.source.ExecSource{name:exec-source,state:IDLE} }} sinkRunners:{kafka-sink=SinkRunner: { policy:org.apache.flume.sink.DefaultSinkProcessor@31f5bc69 counterGroup:{ name:null counters:{} } }} channels:{memory-channel=org.apache.flume.channel.MemoryChannel{name: memory-channel}} }
+04 十一月 2018 14:23:35,877 INFO  [conf-file-poller-0] (org.apache.flume.node.Application.startAllComponents:145)  - Starting Channel memory-channel
+04 十一月 2018 14:23:35,925 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.register:120)  - Monitored counter group for type: CHANNEL, name: memory-channel: Successfully registered new MBean.
+04 十一月 2018 14:23:35,925 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.start:96)  - Component type: CHANNEL, name: memory-channel started
+04 十一月 2018 14:23:35,925 INFO  [conf-file-poller-0] (org.apache.flume.node.Application.startAllComponents:173)  - Starting Sink kafka-sink
+04 十一月 2018 14:23:35,925 INFO  [conf-file-poller-0] (org.apache.flume.node.Application.startAllComponents:184)  - Starting Source exec-source
+04 十一月 2018 14:23:35,926 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.source.ExecSource.start:169)  - Exec source starting with command:tail -F /Users/harold/Documents/Code/sparkdemo/out/server_log
+04 十一月 2018 14:23:35,929 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.register:120)  - Monitored counter group for type: SOURCE, name: exec-source: Successfully registered new MBean.
+04 十一月 2018 14:23:35,929 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.start:96)  - Component type: SOURCE, name: exec-source started
+04 十一月 2018 14:23:36,104 INFO  [lifecycleSupervisor-1-1] (kafka.utils.Logging$class.info:68)  - Verifying properties
+04 十一月 2018 14:23:36,121 INFO  [lifecycleSupervisor-1-1] (kafka.utils.Logging$class.info:68)  - Property key.serializer.class is overridden to kafka.serializer.StringEncoder
+04 十一月 2018 14:23:36,121 INFO  [lifecycleSupervisor-1-1] (kafka.utils.Logging$class.info:68)  - Property metadata.broker.list is overridden to localhost:9092
+04 十一月 2018 14:23:36,122 INFO  [lifecycleSupervisor-1-1] (kafka.utils.Logging$class.info:68)  - Property request.required.acks is overridden to 1
+04 十一月 2018 14:23:36,122 INFO  [lifecycleSupervisor-1-1] (kafka.utils.Logging$class.info:68)  - Property serializer.class is overridden to kafka.serializer.DefaultEncoder
+04 十一月 2018 14:23:36,151 INFO  [lifecycleSupervisor-1-1] (org.apache.flume.instrumentation.MonitoredCounterGroup.register:120)  - Monitored counter group for type: SINK, name: kafka-sink: Successfully registered new MBean.
+04 十一月 2018 14:23:36,151 INFO  [lifecycleSupervisor-1-1] (org.apache.flume.instrumentation.MonitoredCounterGroup.start:96)  - Component type: SINK, name: kafka-sink started
+04 十一月 2018 14:23:39,043 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (kafka.utils.Logging$class.info:68)  - Fetching metadata from broker id:0,host:localhost,port:9092 with correlation id 0 for 1 topic(s) Set(streamingtopic)
+04 十一月 2018 14:23:39,062 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (kafka.utils.Logging$class.info:68)  - Connected to localhost:9092 for producing
+04 十一月 2018 14:23:39,083 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (kafka.utils.Logging$class.info:68)  - Disconnecting from localhost:9092
+04 十一月 2018 14:23:39,115 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (kafka.utils.Logging$class.info:68)  - Connected to localhost:9092 for producing
+04 十一月 2018 14:46:14,353 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (kafka.utils.Logging$class.info:68)  - Fetching metadata from broker id:0,host:localhost,port:9092 with correlation id 36 for 1 topic(s) Set(streamingtopic)
+04 十一月 2018 14:46:14,354 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (kafka.utils.Logging$class.info:68)  - Connected to localhost:9092 for producing
+04 十一月 2018 14:46:14,356 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (kafka.utils.Logging$class.info:68)  - Disconnecting from localhost:9092
+04 十一月 2018 14:46:14,356 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (kafka.utils.Logging$class.info:68)  - Disconnecting from localhost:9092
+04 十一月 2018 14:46:14,357 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (kafka.utils.Logging$class.info:68)  - Connected to localhost:9092 for producing
+04 十一月 2018 15:18:24,624 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (kafka.utils.Logging$class.info:68)  - Fetching metadata from broker id:0,host:localhost,port:9092 with correlation id 130 for 1 topic(s) Set(streamingtopic)
+04 十一月 2018 15:18:24,626 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (kafka.utils.Logging$class.info:68)  - Connected to localhost:9092 for producing
+04 十一月 2018 15:18:24,628 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (kafka.utils.Logging$class.info:68)  - Disconnecting from localhost:9092
+04 十一月 2018 15:18:24,629 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (kafka.utils.Logging$class.info:68)  - Disconnecting from localhost:9092
+04 十一月 2018 15:18:24,630 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (kafka.utils.Logging$class.info:68)  - Connected to localhost:9092 for producing
+04 十一月 2018 17:19:48,015 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (kafka.utils.Logging$class.info:68)  - Fetching metadata from broker id:0,host:localhost,port:9092 with correlation id 199 for 1 topic(s) Set(streamingtopic)
+04 十一月 2018 17:19:48,016 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (kafka.utils.Logging$class.info:68)  - Connected to localhost:9092 for producing
+04 十一月 2018 17:19:48,018 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (kafka.utils.Logging$class.info:68)  - Disconnecting from localhost:9092
+04 十一月 2018 17:19:48,018 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (kafka.utils.Logging$class.info:68)  - Disconnecting from localhost:9092
+04 十一月 2018 17:19:48,021 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (kafka.utils.Logging$class.info:68)  - Connected to localhost:9092 for producing
+04 十一月 2018 19:48:13,395 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (kafka.utils.Logging$class.info:68)  - Fetching metadata from broker id:0,host:localhost,port:9092 with correlation id 336 for 1 topic(s) Set(streamingtopic)
+04 十一月 2018 19:48:13,396 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (kafka.utils.Logging$class.info:68)  - Connected to localhost:9092 for producing
+04 十一月 2018 19:48:13,398 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (kafka.utils.Logging$class.info:68)  - Disconnecting from localhost:9092
+04 十一月 2018 19:48:13,399 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (kafka.utils.Logging$class.info:68)  - Disconnecting from localhost:9092
+04 十一月 2018 19:48:13,400 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (kafka.utils.Logging$class.info:68)  - Connected to localhost:9092 for producing
+04 十一月 2018 20:56:50,438 INFO  [pool-3-thread-1] (org.apache.flume.source.ExecSource$ExecRunnable.run:376)  - Command [tail -F /Users/harold/Documents/Code/sparkdemo/out/server_log] exited with 130
+04 十一月 2018 20:56:50,439 INFO  [agent-shutdown-hook] (org.apache.flume.lifecycle.LifecycleSupervisor.stop:79)  - Stopping lifecycle supervisor 11
+04 十一月 2018 20:56:50,445 INFO  [agent-shutdown-hook] (kafka.utils.Logging$class.info:68)  - Shutting down producer
+04 十一月 2018 20:56:50,445 INFO  [agent-shutdown-hook] (kafka.utils.Logging$class.info:68)  - Closing all sync producers
+04 十一月 2018 20:56:50,446 INFO  [agent-shutdown-hook] (kafka.utils.Logging$class.info:68)  - Disconnecting from localhost:9092
+04 十一月 2018 20:56:50,447 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:150)  - Component type: SINK, name: kafka-sink stopped
+04 十一月 2018 20:56:50,447 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:156)  - Shutdown Metric for type: SINK, name: kafka-sink. sink.start.time == 1541312616151
+04 十一月 2018 20:56:50,447 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:162)  - Shutdown Metric for type: SINK, name: kafka-sink. sink.stop.time == 1541336210447
+04 十一月 2018 20:56:50,447 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:178)  - Shutdown Metric for type: SINK, name: kafka-sink. channel.kafka.event.send.time == 351
+04 十一月 2018 20:56:50,448 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:178)  - Shutdown Metric for type: SINK, name: kafka-sink. channel.rollback.count == 0
+04 十一月 2018 20:56:50,448 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:178)  - Shutdown Metric for type: SINK, name: kafka-sink. sink.batch.complete == 0
+04 十一月 2018 20:56:50,448 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:178)  - Shutdown Metric for type: SINK, name: kafka-sink. sink.batch.empty == 0
+04 十一月 2018 20:56:50,448 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:178)  - Shutdown Metric for type: SINK, name: kafka-sink. sink.batch.underflow == 0
+04 十一月 2018 20:56:50,448 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:178)  - Shutdown Metric for type: SINK, name: kafka-sink. sink.connection.closed.count == 0
+04 十一月 2018 20:56:50,448 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:178)  - Shutdown Metric for type: SINK, name: kafka-sink. sink.connection.creation.count == 0
+04 十一月 2018 20:56:50,448 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:178)  - Shutdown Metric for type: SINK, name: kafka-sink. sink.connection.failed.count == 0
+04 十一月 2018 20:56:50,448 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:178)  - Shutdown Metric for type: SINK, name: kafka-sink. sink.event.drain.attempt == 0
+04 十一月 2018 20:56:50,448 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:178)  - Shutdown Metric for type: SINK, name: kafka-sink. sink.event.drain.sucess == 440
+04 十一月 2018 20:56:50,448 INFO  [agent-shutdown-hook] (org.apache.flume.sink.kafka.KafkaSink.stop:173)  - Kafka Sink kafka-sink stopped. Metrics: SINK:kafka-sink{sink.batch.underflow=0, sink.connection.failed.count=0, sink.connection.closed.count=0, channel.kafka.event.send.time=351, sink.event.drain.attempt=0, sink.batch.complete=0, sink.event.drain.sucess=440, sink.connection.creation.count=0, channel.rollback.count=0, sink.batch.empty=0}
+04 十一月 2018 20:56:50,449 INFO  [agent-shutdown-hook] (org.apache.flume.source.ExecSource.stop:192)  - Stopping exec source with command:tail -F /Users/harold/Documents/Code/sparkdemo/out/server_log
+04 十一月 2018 20:56:50,449 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:150)  - Component type: SOURCE, name: exec-source stopped
+04 十一月 2018 20:56:50,449 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:156)  - Shutdown Metric for type: SOURCE, name: exec-source. source.start.time == 1541312615929
+04 十一月 2018 20:56:50,449 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:162)  - Shutdown Metric for type: SOURCE, name: exec-source. source.stop.time == 1541336210449
+04 十一月 2018 20:56:50,449 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:178)  - Shutdown Metric for type: SOURCE, name: exec-source. src.append-batch.accepted == 0
+04 十一月 2018 20:56:50,449 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:178)  - Shutdown Metric for type: SOURCE, name: exec-source. src.append-batch.received == 0
+04 十一月 2018 20:56:50,449 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:178)  - Shutdown Metric for type: SOURCE, name: exec-source. src.append.accepted == 0
+04 十一月 2018 20:56:50,449 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:178)  - Shutdown Metric for type: SOURCE, name: exec-source. src.append.received == 0
+04 十一月 2018 20:56:50,450 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:178)  - Shutdown Metric for type: SOURCE, name: exec-source. src.events.accepted == 440
+04 十一月 2018 20:56:50,450 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:178)  - Shutdown Metric for type: SOURCE, name: exec-source. src.events.received == 440
+04 十一月 2018 20:56:50,450 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:178)  - Shutdown Metric for type: SOURCE, name: exec-source. src.open-connection.count == 0
+04 十一月 2018 20:56:50,450 INFO  [agent-shutdown-hook] (org.apache.flume.node.PollingPropertiesFileConfigurationProvider.stop:83)  - Configuration provider stopping
+04 十一月 2018 20:56:50,450 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:150)  - Component type: CHANNEL, name: memory-channel stopped
+04 十一月 2018 20:56:50,450 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:156)  - Shutdown Metric for type: CHANNEL, name: memory-channel. channel.start.time == 1541312615925
+04 十一月 2018 20:56:50,450 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:162)  - Shutdown Metric for type: CHANNEL, name: memory-channel. channel.stop.time == 1541336210450
+04 十一月 2018 20:56:50,450 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:178)  - Shutdown Metric for type: CHANNEL, name: memory-channel. channel.capacity == 100
+04 十一月 2018 20:56:50,451 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:178)  - Shutdown Metric for type: CHANNEL, name: memory-channel. channel.current.size == 0
+04 十一月 2018 20:56:50,451 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:178)  - Shutdown Metric for type: CHANNEL, name: memory-channel. channel.event.put.attempt == 440
+04 十一月 2018 20:56:50,451 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:178)  - Shutdown Metric for type: CHANNEL, name: memory-channel. channel.event.put.success == 440
+04 十一月 2018 20:56:50,451 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:178)  - Shutdown Metric for type: CHANNEL, name: memory-channel. channel.event.take.attempt == 6177
+04 十一月 2018 20:56:50,451 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:178)  - Shutdown Metric for type: CHANNEL, name: memory-channel. channel.event.take.success == 440
